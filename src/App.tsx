@@ -6,8 +6,10 @@ import Home from './views/home/Home';
 import Movie from './views/movie/Movie';
 import PageNotFound from './views/PageNotFound/PageNotFound';
 import store from './store';
+import TodoPanel from './views/todoPanel/todoPanel';
 
 import './App.css';
+
 
 const  App = () => {
 
@@ -19,6 +21,7 @@ const  App = () => {
         {/* exact pozwala na wpakowanie home poza kolejką */}
         <Route path='/' component={Home} exact /> 
         <Route path='/movie/:id' component={Movie} />
+        <Route path='/todos' component={TodoPanel} />
         <Route path='*' component={PageNotFound} />
         
       </Switch>
